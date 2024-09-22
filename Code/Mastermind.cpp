@@ -4,13 +4,13 @@
 Mastermind::Mastermind(LinkedList<Combination>* _list)
 {
 	//TODO: Compléter
+	this->list = _list;
 }
 
 Mastermind::~Mastermind()
 {
 	//TODO: Compléter
 }
-
 
 int Mastermind::getNbElements() const
 {

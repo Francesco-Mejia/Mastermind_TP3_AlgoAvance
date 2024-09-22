@@ -1,6 +1,5 @@
 #include "Color.h"
 
-
 Color::Color(void)
 {
     color = 0;

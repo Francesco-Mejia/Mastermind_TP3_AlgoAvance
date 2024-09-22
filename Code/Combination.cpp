@@ -32,7 +32,13 @@ bool Combination::operator > (const Combination& _combination) const
 bool Combination::operator == (const Combination& _combination) const
 {
 	//TODO : Compléter
-	
+	for (unsigned int i = 0; i < NB_COLORS; i++)
+	{
+		if (tabColors[i] != _combination.tabColors[i])
+		{
+			return false;
+		}
+	}
 	return true;
 }
 
