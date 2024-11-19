@@ -16,7 +16,7 @@ public:
 
     bool operator<(const Color& _c);
 
-    bool operator!=(const Color& _c);
+    bool operator!=(const Color& _c) const;
 
     void operator=(const Color& _c);
  

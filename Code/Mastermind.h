@@ -1,12 +1,14 @@
 #pragma once
-
 #include "Combination.h"
 #include "Color.h"
-
-//Ctrl-click pour aller dans votre
 #include <LinkedList.h>
 
 const int NB_POSSIBLE_COMBINATIONS = 4096;
+const int NB_POSSIBLE_COLORS = 8;
+const int NB_COLORS_PER_COMBINATION = 4;
+const int VERDICT_CORRECT_POSITION = 1;
+const int VERDICT_CORRECT_COLOR_WRONG_POSITION = 2;
+const int VERDICT_WRONG_COLOR = 3;
 
 class Mastermind
 {
@@ -24,5 +26,6 @@ private:
 
 	bool isPossibleCombination(Combination* _toValidate, Combination* _ref, short* _tabVerdicts);
     Combination* tabCombinations[NB_POSSIBLE_COMBINATIONS];
-    LinkedList<Combination>* list; //Contient toutes les combinaisons de couleurs possibles, selon le contexte.
+    LinkedList<Combination>* list;
+    void generateAllCombinations();
 };

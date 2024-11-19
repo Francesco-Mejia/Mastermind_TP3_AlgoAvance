@@ -1,6 +1,5 @@
 #include "Combination.h"
 
-
 Combination::Combination(Color c1, Color c2, Color c3, Color c4)
 {
 	tabColors[0] = c1;
@@ -11,7 +10,14 @@ Combination::Combination(Color c1, Color c2, Color c3, Color c4)
 
 Color Combination::getColor(int index)
 {
-	if (index < 0 || index > 3) throw invalid_argument("Votre index n'est pas entre 0 et 3");
+	if (index < 0 || index > 3) 
+	{
+		throw invalid_argument("Votre index n'est pas entre 0 et 3");
+	} 
+	if (this == nullptr)
+	{ 
+		throw runtime_error("L'objet Combination est null");
+	}
 	return tabColors[index];
 }
 
@@ -31,7 +37,6 @@ bool Combination::operator > (const Combination& _combination) const
 
 bool Combination::operator == (const Combination& _combination) const
 {
-	//TODO : Compléter
 	for (unsigned int i = 0; i < NB_COLORS; i++)
 	{
 		if (tabColors[i] != _combination.tabColors[i])

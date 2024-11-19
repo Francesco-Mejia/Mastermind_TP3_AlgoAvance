@@ -55,7 +55,7 @@ bool Color::operator<(const Color& c){
     return color < c.color;
 }
 
-bool Color::operator!=(const Color& c){
+bool Color::operator!=(const Color& c) const{
     return color != c.color;
 }
 
